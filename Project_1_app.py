@@ -321,17 +321,29 @@ def analyze_anomaly_for_admin(form_data, suggested_price):
 # =========================
 # SIDEBAR
 # =========================
-st.sidebar.title("⚙️ Cài đặt")
-admin_mode = st.sidebar.checkbox("Admin mode")
+st.sidebar.title("Menu chính")
+
+admin_mode = False
+
+with st.sidebar:
+    show_admin = st.checkbox("Admin mode")
+
+    if show_admin:
+        admin_password = st.text_input("Nhập mật khẩu", type="password")
+
+        if admin_password == "123456":
+            admin_mode = True
+        else:
+            st.warning("Sai mật khẩu")
 
 if admin_mode:
     page = st.sidebar.radio(
-        "Menu",
+        "**Menu**",
         ["Giới thiệu", "Đăng tin", "Quản trị tin đăng", "Bất động sản đang bán", "Thông tin mô hình"]
     )
 else:
     page = st.sidebar.radio(
-        "Menu",
+        "**Menu**",
         ["Giới thiệu", "Đăng tin", "Bất động sản đang bán"]
     )
 
