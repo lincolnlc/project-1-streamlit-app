@@ -383,9 +383,12 @@ elif page == "Đăng tin":
     st.subheader("Đăng tin bán bất động sản")
 
     HCM_DISTRICTS = [
-        "Quận Bình Thạnh",
-        "Quận Gò Vấp",
-        "Quận Phú Nhuận"
+        "Quận 1","Quận 3","Quận 4","Quận 5","Quận 6","Quận 7","Quận 8",
+        "Quận 10","Quận 11","Quận 12",
+        "Quận Bình Thạnh","Quận Gò Vấp","Quận Phú Nhuận",
+        "Quận Tân Bình","Quận Tân Phú","Quận Bình Tân",
+        "TP Thủ Đức",
+        "Huyện Bình Chánh","Huyện Nhà Bè","Huyện Hóc Môn","Huyện Củ Chi","Huyện Cần Giờ"
     ]
 
     DISTRICT_MAP = {
