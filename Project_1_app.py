@@ -848,3 +848,16 @@ elif page == "Thông tin mô hình":
         st.dataframe(df_anom[show_cols].style.set_properties(**{'background-color': '#f5e9c1'}), hide_index=True, use_container_width=True, height=500)
     except:
         st.warning("Không load được thông tin")
+
+st.divider()
+
+st.markdown(
+    """
+    <div style='text-align: center; font-size: 14px; color: #555; margin-top: 20px;'>
+        <b>Người thực hiện:</b> Lê Văn Linh & Nguyễn Trọng Khiêm<br>
+        <b>GV hướng dẫn:</b> Cô Khuất Thùy Phương<br>
+        <b>Project:</b> Dự đoán giá nhà và phát hiện giá bất thường cho nhà ở trên Nhà Tốt
+    </div>
+    """,
+    unsafe_allow_html=True
+)
