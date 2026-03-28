@@ -856,7 +856,7 @@ st.markdown(
     <div style='text-align: center; font-size: 14px; color: #555; margin-top: 20px;'>
         <b>Người thực hiện:</b> Lê Văn Linh & Nguyễn Trọng Khiêm<br>
         <b>GV hướng dẫn:</b> Cô Khuất Thùy Phương<br>
-        <b>Project:</b> Dự đoán giá nhà và phát hiện giá bất thường cho nhà ở trên Nhà Tốt
+        <b>Project:</b> Dự đoán giá nhà và phát hiện giá bất thường cho nhà ở TP.HCM
     </div>
     """,
     unsafe_allow_html=True
