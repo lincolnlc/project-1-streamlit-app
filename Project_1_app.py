@@ -1104,8 +1104,8 @@ elif page == "Thông tin mô hình":
         show_cols = [c for c in show_cols if c in df_anom.columns]
         with st.container(border=True):
                     st.dataframe(df_anom[show_cols][df_anom["is_anomaly"]==1].style.set_properties(**{'background-color': '#f5e9c1'}), hide_index=True, use_container_width=True, height=500)
-            except:
-                st.warning("Không load được thông tin")
+    except:
+        st.warning("Không load được thông tin")
 
 # =========================
 # FOOTER
