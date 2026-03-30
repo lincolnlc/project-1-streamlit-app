@@ -1110,13 +1110,10 @@ elif page == "Thông tin mô hình":
 # FOOTER
 # =========================
 st.divider()
-st.markdown(
-    """
-    <div style='text-align: center; font-size: 14px; color: #555; margin-top: 20px;'>
-        <b>Người thực hiện:</b> Lê Văn Linh & Nguyễn Trọng Khiêm<br>
-        <b>GV hướng dẫn:</b> Cô Khuất Thùy Phương<br>
-        <b>Project:</b> Dự đoán giá nhà và phát hiện giá bất thường cho nhà ở trên Nhà Tốt
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+st.caption("*Smart Home Pricing*")
+st.caption("**Người thực hiện:**")
+st.caption(" - Lê Văn Linh - [levanlinh8583@gmail.com](mailto:levanlinh8583@gmail.com)")
+st.caption(" - Nguyễn Trọng Khiêm - [keyzyah@gmail.com](mailto:keyzyah@gmail.com)")
+
+st.caption("**GV hướng dẫn:** Cô Khuất Thùy Phương")
+st.caption("**Project:** Dự đoán giá nhà và phát hiện giá bất thường cho nhà ở TP.HCM")
