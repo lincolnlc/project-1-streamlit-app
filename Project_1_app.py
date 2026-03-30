@@ -950,13 +950,13 @@ elif page == "Bất động sản đang bán":
         else:
             if submit_search:
                 st.success(f"Tìm thấy {len(df_view)} bất động sản phù hợp.")
-
-            st.dataframe(
-                df_view.head(200),
-                hide_index=True,
-                use_container_width=True,
-                height=500
-            )
+            with st.container(border=True):
+                st.dataframe(
+                    df_view.head(200),
+                    hide_index=True,
+                    use_container_width=True,
+                    height=500
+                )
 
 # =========================
 # PAGE: MODEL INFORMATION
@@ -1059,8 +1059,8 @@ elif page == "Thông tin mô hình":
             0.008136
         ]
     })
-
-    st.dataframe(fi_df.style.set_properties(**{'background-color': '#f5e9c1'}), hide_index=True, use_container_width=True)
+    with st.container(border=True):
+        st.dataframe(fi_df.style.set_properties(**{'background-color': '#f5e9c1'}), hide_index=True, use_container_width=True)
     fi_df_sorted = fi_df.sort_values("importance", ascending=False)
     st.bar_chart(fi_df_sorted.set_index("feature")["importance"], horizontal=True, sort=False)
 
@@ -1082,8 +1082,8 @@ elif page == "Thông tin mô hình":
             0.3
         ]
     })
-
-    st.dataframe(weight_df.style.set_properties(**{'background-color': '#f5e9c1'}), hide_index=True, use_container_width=True)
+    with st.container(border=True):
+            st.dataframe(weight_df.style.format({"Trọng số": "{:.2f}"}).set_properties(**{'background-color': '#f5e9c1'}), hide_index=True, use_container_width=True)
 
     st.divider()
 
@@ -1102,9 +1102,10 @@ elif page == "Thông tin mô hình":
         ]
 
         show_cols = [c for c in show_cols if c in df_anom.columns]
-        st.dataframe(df_anom[show_cols].style.set_properties(**{'background-color': '#f5e9c1'}), hide_index=True, use_container_width=True, height=500)
-    except:
-        st.warning("Không load được thông tin")
+        with st.container(border=True):
+                    st.dataframe(df_anom[show_cols][df_anom["is_anomaly"]==1].style.set_properties(**{'background-color': '#f5e9c1'}), hide_index=True, use_container_width=True, height=500)
+            except:
+                st.warning("Không load được thông tin")
 
 # =========================
 # FOOTER
